@@ -17,3 +17,13 @@ but in case of http, the connection is closed once a request is served by a serv
 # 3. We have web socket protocol for communication purpose then why need STOMP protocol?
 
 ![Screenshot from 2022-06-14 11-16-59](https://user-images.githubusercontent.com/42698268/173760499-ab8c26d9-a770-4b99-9bd1-e3c84e68ed55.png)
+
+# 4. Now we'll go to the eclipse and create a server side application and then we'll create a client side application
+* In pom.xml we added only websocket dependency, to achieve full web socketfeatures using stomp we need to add one more dependency
+
+```java
+<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-reactor-netty</artifactId>
+</dependency>
+```
