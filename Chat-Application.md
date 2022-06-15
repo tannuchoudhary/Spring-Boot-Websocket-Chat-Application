@@ -19,7 +19,7 @@ but in case of http, the connection is closed once a request is served by a serv
 ![Screenshot from 2022-06-14 11-16-59](https://user-images.githubusercontent.com/42698268/173760499-ab8c26d9-a770-4b99-9bd1-e3c84e68ed55.png)
 
 # 4. Now we'll go to the eclipse and create a server side application and then we'll create a client side application
-* In pom.xml we added only websocket dependency, to achieve full web socketfeatures using stomp we need to add one more dependency
+## A. In pom.xml we added only websocket dependency, to achieve full web socketfeatures using stomp we need to add one more dependency
 
 ```java
 <dependency>
@@ -27,3 +27,33 @@ but in case of http, the connection is closed once a request is served by a serv
         <artifactId>spring-boot-starter-reactor-netty</artifactId>
 </dependency>
 ```
+## B. Now create required packages such as configuration, controller and model
+
+![Screenshot from 2022-06-15 12-47-44](https://user-images.githubusercontent.com/42698268/173769513-d60d80bb-a0ae-4c8f-80ad-6e188c0a7aa6.png)
+
+## C. Now go to the configuration package and enable the stomp protocol and message broker 
+* Create a class named ws.config
+* Now annotate it with @Configuration
+* Now enable web socket server using @EnableWebSocketMessageBroker
+* Now implement your class to WebSocketMessageBrokerConfigurer
+* Now you have to write two methods, one for registering STOMP end-point and another for message broker
+* In case of STOMP END points, we need to provide a prefix URL
+
+
+![Screenshot from 2022-06-15 13-44-49](https://user-images.githubusercontent.com/42698268/173777731-5f4f9c6b-e69c-4dc8-b388-4246ee2f97c7.png)
+
+
+* We are using withSockJS() here, the advantage of using withSockJS here is that whenever the web socket connection is disconnected or the web socket connection cannot be established then that time connection will be downgraded to http and the communication between client and server still continue
+* For configureMessageBroker() we need to provide URL
+* We need to specify the url here, the same url we need to configure in our client side
+
+![Screenshot from 2022-06-15 13-57-32](https://user-images.githubusercontent.com/42698268/173780733-c67021fd-c8fb-4d00-b7b6-161617fa11ad.png)
+
+* Now we are done with the configuration
+
+
+
+
+
+
+
