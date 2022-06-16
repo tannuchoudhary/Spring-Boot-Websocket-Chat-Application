@@ -18,6 +18,7 @@ but in case of http, the connection is closed once a request is served by a serv
 
 ![Screenshot from 2022-06-14 11-16-59](https://user-images.githubusercontent.com/42698268/173760499-ab8c26d9-a770-4b99-9bd1-e3c84e68ed55.png)
 
+# SERVER SIDE APPLICATION
 # 4. Now we'll go to the eclipse and create a server side application and then we'll create a client side application
 ## A. In pom.xml we added only websocket dependency, to achieve full web socketfeatures using stomp we need to add one more dependency
 
@@ -74,6 +75,7 @@ but in case of http, the connection is closed once a request is served by a serv
 * Now we are done with server side details
 * Now we need to add the client side details
 
+# CLIENT SIDE DETAILS
 
 
 
