@@ -51,7 +51,12 @@ but in case of http, the connection is closed once a request is served by a serv
 
 * Now we are done with the configuration
 
-
+# 5. Now create model
+* Create a class called ChatMessage
+* Define Content and Sender
+* Create one more enum to check whether the sender has joined the chat or left the chat 
+* So define CHAT, LEAVE and JOIN
+* And define getters and setters for defined fields
 
 
 
