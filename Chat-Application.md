@@ -71,6 +71,8 @@ but in case of http, the connection is closed once a request is served by a serv
 * and one more annotation which is @SendTo(), this annotation will help  us to specify the queue, i.e request channel and response channel based on the url
 * Now specify it with something like @SendTo("/topic/public"), which we had mentioned in our config file
 * Now define one more method to continue the chat called sendMessage()
+* Now we are done with server side details
+* Now we need to add the client side details
 
 
 
