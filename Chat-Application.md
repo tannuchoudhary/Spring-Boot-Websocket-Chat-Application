@@ -58,6 +58,14 @@ but in case of http, the connection is closed once a request is served by a serv
 * So define CHAT, LEAVE and JOIN
 * And define getters and setters for defined fields
 
+# 6. Now create controller
+* Annotate your class with @Controller
+* First the user need to be registered on the portal, then only you will be able to chat, so first of all add the user to the chat
+* Give the request body chatMessage and annotate it with @Payload
+* For websocket to capture the request, we use annotation @payload  
+* And we also need to capture the username who is going to chat now, to do that we need to use a class SimpleMessageHeaderAccessor
+* Now get the session attribute and in the session attribute, put the name of the user who is goint to register now, and get the username from the request body using chatMessage.getSender()
+
 
 
 
