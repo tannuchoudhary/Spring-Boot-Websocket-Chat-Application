@@ -65,7 +65,12 @@ but in case of http, the connection is closed once a request is served by a serv
 * For websocket to capture the request, we use annotation @payload  
 * And we also need to capture the username who is going to chat now, to do that we need to use a class SimpleMessageHeaderAccessor
 * Now get the session attribute and in the session attribute, put the name of the user who is goint to register now, and get the username from the request body using chatMessage.getSender()
-
+* Now return the chatMessage
+* and annotate this method with @MessageMapping, this annotation will help us to map the same url from client to our server
+* So specify the path
+* and one more annotation which is @SendTo(), this annotation will help  us to specify the queue, i.e request channel and response channel based on the url
+* Now specify it with something like @SendTo("/topic/public"), which we had mentioned in our config file
+* Now define one more method to continue the chat called sendMessage()
 
 
 
